@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Bienvenido a <%= title %></p>
+    <h1><%= nombre %></h1>
+    <ul>
+      <% names_online.forEach(function(user) { %>
+        <li>
+          <strong><%= user.name %></strong>: <%= user.phone%>
+        </li>
+      <% }); %>
+    </ul>
+    <ul>
+      <li>123</li>
+      <li>456</li>
+      <li>789</li>
+    </ul>
+  <table>
+
+    <thead>
+      <th>Nombre</th>
+      <th>Talla</th>
+      <th>Color</th>
+      <th>Precio</th>
+    </thead>
+    <% producto.forEach(function(pro) { %>
+        <tr>
+          <td><%= pro.nombre %></td>
+          <td><%= pro.talla %></td>
+          <td><%= pro.color %></td>
+          <td><%= pro.precio %></td>
+        </tr>
+    <% }); %>
+  </table>
+  </body>
+</html>

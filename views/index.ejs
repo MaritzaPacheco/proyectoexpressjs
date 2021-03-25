@@ -1,41 +1,360 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coffee Colab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "icon" href = "/images/logo.png" type = "image/logo" sizes = "16x16">
+    <!-- custom css -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- google fonts -->
+    <link rel = "stylesheet" href = "/stylesheets/fonts.css">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- normalize css -->
+    <link rel = "stylesheet" href = "/stylesheets/normalize.css">
+    <!-- magnific popup -->
+    <link rel = "stylesheet" href = "/stylesheets/magnific-popup.css">
+    <!-- slick css -->
+    <link rel = "stylesheet" href = "/stylesheets/slick.css">
+    <link rel = "stylesheet" href = "/stylesheets/slick-theme.css">
+    <!-- animate on scroll -->
+    <link rel = "stylesheet" href = "/stylesheets/aos.css">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Bienvenido a <%= title %></p>
-    <h1><%= nombre %></h1>
-    <ul>
-      <% names_online.forEach(function(user) { %>
-        <li>
-          <strong><%= user.name %></strong>: <%= user.phone%>
-        </li>
-      <% }); %>
-    </ul>
-    <ul>
-      <li>123</li>
-      <li>456</li>
-      <li>789</li>
-    </ul>
-  <table>
 
-    <thead>
-      <th>Nombre</th>
-      <th>Talla</th>
-      <th>Color</th>
-      <th>Precio</th>
-    </thead>
-    <% producto.forEach(function(pro) { %>
-        <tr>
-          <td><%= pro.nombre %></td>
-          <td><%= pro.talla %></td>
-          <td><%= pro.color %></td>
-          <td><%= pro.precio %></td>
-        </tr>
-    <% }); %>
-  </table>
+    <!-- navbar -->
+    <nav class = "navbar">
+      <div class = "nav-brand-toggler">
+        <a href = "index.html" class = "navbar-brand">Coffee <span>.</span> Colab</a>
+        <button type = "button" class = "navbar-toggler" id = "navbar-toggler">
+          <i class = "fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class = "navbar-collapse">
+        <ul class = "navbar-nav">
+          <li class = "nav-item">
+            <a href = "#home" class = "nav-link">Inicio</a>
+          </li>
+          <li class = "nav-item">
+            <a href = "#about" class = "nav-link">Acerca de nosotros</a>
+          </li>
+          <li class = "nav-item">
+            <a href = "#menu" class = "nav-link">menu</a>
+          </li>
+          <li class = "nav-item">
+            <a href = "#contact" class = "nav-link">contactos</a>
+          </li>
+        </ul>
+
+        <div class = "nav-info">
+          <span class = "call-info">
+            <i class = "fas fa-phone"></i>
+            +591 77190098
+          </span>
+        <div class="cart-icon"><i class="fas fa-cart-plus"></i></div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- header -->
+    <header class = "header" id = "home">
+      <div class = "container">
+        <h2>Cafeteria</h2>
+        <h1 class = "header-title">Disfruta de la vida con un delicioso  Café</h1>
+        <button onclick="boton();" type = "button" class = "btn">Comprar</button>
+      </div>
+    </header>
+    <!-- end of header -->
+    
+    <!-- about -->
+    <section id = "about" class = "about container section-py">
+      <div class = "about-left" data-aos = "fade-right">
+        <!-- title -->
+        <div class = "title">
+          <h4>Nuestra historia</h4>
+          <h2>Buscamos la satisfacción de nuestros consumidores</h2>
+        </div>
+        <!-- end of title -->
+        <p class = "para-text">
+          Somos expertos cafeteros, respetando los orígenes y buscando blends equilibrados en aroma y sabor para que disfrutes al máximo.
+        </p>
+        <p class = "para-text">
+          Seleccionamos orígenes que garanticen la calidad en verde, la sostenibilidad del entorno y el comercio justo. Nuestro secreto para conseguir un nivel máximo de calidad y uniformidad en el sabor reside en la forma en que se selecciona, ensila y se tuesta el grano.
+
+        </p>
+      </div>
+
+      <div class = "about-right" data-aos = "fade-left">
+        <img src = "/images/about.jpg" alt = "chef image">
+      </div>
+    </section>
+    <!-- end of about -->
+
+
+
+    <!-- menu -->
+    <section id = "menu" class = "menu section-py">
+      <!-- title -->
+      <div class = "title">
+        <h4>Exquisito Café </h4>
+        <h2>Calidad de Café</h2>
+      </div>
+      <!-- end of title -->
+        <!-- Menu-->
+      <div class = "menu-wrapper popup-gallery" data-aos = "fade-up">
+        <!-- item -->
+        <div class = "menu-item">
+          <a href = "/images/cafe1.jpg">
+            <img src = "/images/cafe1.jpg" alt = "food image">
+            <div class = "menu-overlay">
+              <div class = "menu-overlay-content">
+                <div>
+                  <h2>Café Americano</h2>
+                  <h2>$35</h2>
+                </div>
+                <h5>Delicioso / Saludable / Barato</h5>
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class = "menu-item">
+          <a href = "/images/cafe2.jpg">
+            <img src = "/images/cafe2.jpg" alt = "food image">
+            <div class = "menu-overlay">
+              <div class = "menu-overlay-content">
+                <div>
+                  <h2>Café Aeropress</h2>
+                  <h2>$25</h2>
+                </div>
+                <h5>Delicioso / Saludable / Barato</h5>
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class = "menu-item">
+          <a href = "/images/cafe3.jpg">
+            <img src = "/images/cafe3.jpg" alt = "food image">
+            <div class = "menu-overlay">
+              <div class = "menu-overlay-content">
+                <div>
+                  <h2>Café Chemex</h2>
+                  <h2>$45</h2>
+                </div>
+                <h5>Delicioso / Saludable / Barato</h5>
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class = "menu-item">
+          <a href = "/images/cafe4.jpg">
+            <img src = "/images/cafe4.jpg" alt = "food image">
+            <div class = "menu-overlay">
+              <div class = "menu-overlay-content">
+                <div>
+                  <h2>Café Chiquitito</h2>
+                  <h2>$30</h2>
+                </div>
+                <h5>Delicioso / Saludable / Barato</h5>
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class = "menu-item">
+          <a href = "/images/cafe5.jpg">
+            <img src = "/images/cafe5.jpg" alt = "food image">
+            <div class = "menu-overlay">
+              <div class = "menu-overlay-content">
+                <div>
+                  <h2>Café con Leche</h2>
+                  <h2>$25</h2>
+                </div>
+                <h5>Delicioso / Saludable / Barato</h5>
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class = "menu-item">
+          <a href = "/images/cafe6.jpg">
+            <img src = "/images/cafe6.jpg" alt = "food image">
+            <div class = "menu-overlay">
+              <div class = "menu-overlay-content">
+                <div>
+                  <h2>Café Expresso</h2>
+                  <h2>$30</h2>
+                </div>
+                <h5>Delicioso / Saludable / Barato</h5>
+
+              </div>
+
+            </div>
+          </a>
+        </div>
+        <!-- end of item -->
+      </div>
+    </section>
+    <!-- end of menu -->
+
+    <!-- Origenes del grano cafe -->
+    <section class = "origen section-py">
+      <!-- title -->
+      <div class = "title">
+        <h2>Origen del Café</h2>
+      </div>
+      <!-- end of title -->
+
+      <div class = "testimonial-slider">
+        <!-- item -->
+        <div class = "origen-item">
+          <img src = "/images/grano.jpg" alt = "grano image">
+          <h3>Café Arábica o Café Arábigo</h3>
+          <p>
+            El origen de esta Grano es Etiopía, donde esta lo que llamamos la cuna y origen del café, si querés saber más puedes leer
+            el artículo “origen del café”.
+            Existen muchísimas variedades y mutaciones de este café.
+            Se caracteriza principalmente por ser rico en sabores y aromas. Según cada variedad sus notas van a cambiar.
+            Tienen notas frutales y aroma floral con una acidez baja y equilibrada.
+            De hecho en muchas fincas donde hacen café de especialidad, una de las cosas que se están haciendo es en el proceso de secado dejarle un poco de pulga que aumenta el espectro de sabores y aromas. Las notas frutales se hacen más presentes.
+            El grano de café Arábica, es muy buscado y deseado por los barístas y sommelier, debido a su sabor equilibrado.
+            Posee menos cafeína que otros granos.
+            La forma del grano arábico es aplanada y alargado, con el surco del centro sinuo.</p>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class = "origen-item">
+          <img src = "/images/cafe.jpg" alt = "grano image">
+          <h3>Café  torrado o café  tostado natural</h3>
+          <p>El Torrado es un café que al tostar el grano se le agrega azúcar quedando una capa superficial a modo de barniz que es un
+            caramelo, o bien azúcar quemada. El torrado se suele utilizar para los cafés de filtro, suele ser muy económico y rendidor.
+            Entre los países que más consumen café torrado está Argentina, Costa Rico, Bolivia, México, Paraguay, Uruguay, Francia,
+            Portugal y España.
+          </p>
+
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class = "origen-item">
+          <img src = "/images/taza.jpg" alt = "people image">
+          <h3>La calidad del café en taza</h3>
+          <p>Para determinar la calidad del café en taza hay que catarlo al igual que se hace con los vinos.
+            En las catas profesionales de café solo pueden participar los catadores que están certificados
+            como «Q grade» por la  SCAA (Asociación Americana de Cafés de Especialidad).</p>
+
+        </div>
+        <!-- end of item -->
+      </div>
+    </section>
+    <!-- end of origen-->
+
+    <!-- contact -->
+    <section id = "contact" class = "contact section-py">
+      <div class = "contact-wrapper container">
+        <div class = "contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123573.50439675193!2d-90.78417055321727!3d14.560739302513058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6257e4e005cce68e!2sCafe%20Cafe%20Guatemala!5e0!3m2!1ses!2sbo!4v1615987528712!5m2!1ses!2sbo" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class = "contact-info">
+          <!-- title -->
+          <div class = "title">
+            <h2>Contactanos</h2>
+          </div>
+          <!-- end of title -->
+          <form class = "contact-form">
+            <div class = "form-group">
+              <input type = "text" class = "form-control" placeholder="Nombre completo">
+              <input type = "email" class = "form-control" placeholder="Email">
+            </div>
+
+            <textarea rows = "5" class = "form-control" placeholder="Comentanos"></textarea>
+            <input type = "submit" class = "btn contact-btn" value = "Enviar">
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- end of contact -->
+
+    <!-- footer -->
+    <footer class = "footer section-py">
+      <div class = "footer-wrapper container">
+        <div class = "footer-item">
+          <h3>Encuéntranos</h3>
+          <p class = "para-text">Sacatepequez 1 Calle Poniente No. 3 La Antigua,  <br>Guatemala 03001, Guatemala</p>
+        </div>
+
+        <div class = "footer-item">
+          <h3>Reservacion</h3>
+          <p class = "para-text">+502-080-18333 | +502-222-3342</p>
+          <p class = "para-text">coffeecolab@gmail.com</p>
+
+        </div>
+
+        <div class = "footer-item">
+          <h3>Open Hours</h3>
+
+          <p>Lunes a viernes</p>
+          <p class = "para-text">7:00 AM - 21:00 PM</p>
+          <p>Sábado a domingo</p>
+          <p class = "para-text">09:00 AM - 22:00 PM</p>
+        </div>
+
+        <div class = "footer-item">
+          <div class = "footer-icons">
+            <a href = "https://www.facebook.com" target = "_blank">
+              <i class = "fab fa-facebook"></i>
+            </a>
+            <a href = "https://www.instagram.com" target = "_blank">
+              <i class = "fab fa-instagram"></i>
+            </a>
+            <a href = "https://www.twitter.com" target = "_blank">
+              <i class = "fab fa-twitter"></i>
+            </a>
+            <a href = "https://www.linkedin.com" target = "_blank">
+              <i class = "fab fa-linkedin"></i>
+            </a>
+          </div>
+          <p class = "para-text">Copyright 2021 &copy; CoffeeColab</p>
+          <p class = "para-text">All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!--- end of footer -->
+
+
+    <!-- jQuery -->
+    <script src = "/javascripts/jquery-3.5.1.js"></script>
+    <!-- magnific popup -->
+    <script src = "/javascripts/jquery.magnific-popup.min.js"></script>
+    <!-- slick js -->
+    <script src = "/javascripts/slick.min.js"></script>
+    <!-- custom js -->
+    <script src="/javascripts/script.js"></script>
+    
+    <!-- animate on scroll -->
+    <script src = "/javascripts/aos.js"></script>
+
+
+
+
   </body>
 </html>

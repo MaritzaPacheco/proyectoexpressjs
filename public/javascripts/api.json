@@ -1,0 +1,38 @@
+[
+  {
+    "precio": 35,
+    "id": 1,
+    "title": "Café Americano",
+    "Url": "images/cafe1.jpg"
+  },
+  {
+    "precio": 25,
+    "id": 2,
+    "title": "Café Aeropress",
+    "Url": "images/cafe2.jpg"
+  },
+  {
+    "precio":  45,
+    "id": 3,
+    "title": "Café Chemex",
+    "Url": "images/cafe3.jpg"
+  },
+  {
+    "precio": 30,
+    "id": 4,
+    "title": "Café Chiquitito",
+    "Url": "images/cafe4.jpg"
+  },
+  {
+    "precio": 25,
+    "id": 5,
+    "title": "Café con Leche",
+    "Url": "images/cafe5.jpg"
+  },
+  {
+    "precio": 30,
+    "id": 6,
+    "title": "Café Expresso",
+    "Url": "images/cafe6.jpg"
+  }
+  ]
