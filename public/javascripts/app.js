@@ -121,7 +121,7 @@ const pintarFooter = () => {
 }
 
 const accionBotones = () => {
-    const botonesAgregar = document.querySelectorAll('#items .btn-primary')
+    const botonesAgregar = document.querySelectorAll('#items .btn-info')
     const botonesEliminar = document.querySelectorAll('#items .btn-danger')
 
     // console.log(botonesAgregar)
